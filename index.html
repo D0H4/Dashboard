@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="preference.css" />
+    <script src="https://kit.fontawesome.com/ace823e9e9.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <title>New Tab</title>
+</head>
+<body>
+    <h1 id="time">12:23</h1>
+    <span class="shortcut">
+        <a href="https://www.naver.com">NAVER</a>
+        <a href="https://www.github.com">GitHub</a>
+        <a href="https://www.youtube.com">YouTube</a>
+        <br>
+        <a href="https://www.music.youtube.com">YouTube Music</a>
+        <a href="https://www.mail.proton.me">Proton</a>
+        <a href="https://www.bard.google.com">Google Bard</a>
+        <br>
+        <a href="https://www.claude.ai/chats">Claude</a>
+        <a href="https://www.devdocs.io">DevDocs</a>
+        <a href="https://www.colorhunt.co">Color Hunt</a>
+    </span>
+    <div class="preference" id="settingWrap" aria-expanded="false", aria-pressed="false">
+        <button class="preference" id="settingBtn">
+            <i class="fa-solid fa-gear" id="settingBtnIcon" style="color: #393c42;"></i>
+        </button>
+    </div>
+    <div class="preference" id="settingTab">
+        <p class="preference" id="preferenceChar" style="font-weight: bold;">Darkmode:</p>
+        <button class="preference" id="darkmodeToggle">
+            <i class="fa-solid fa-lightbulb" id="darkmodeToggleIcon" style="color: #121212;"></i>
+        </button>
+    </div>
+</body>
+</html>

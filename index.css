@@ -1,0 +1,37 @@
+:root[color-theme='light'] {
+    --background: #fff;
+    --color: #212529;
+}
+
+:root[color-theme='dark'] {
+    --background: #121212;
+    --color: white;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color);
+    text-align: left;
+    margin: 10px;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+    display: block;
+}
+
+#time {
+    font-size: 75px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.shortcut {
+    border-radius: 20px;
+}
