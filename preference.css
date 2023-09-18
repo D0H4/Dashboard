@@ -48,7 +48,12 @@
     box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0,0,0,.15);
 }
 
-#preferenceChar {
+#darkmodeDesc {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#timeLocDesc {
     margin-left: 10px;
     display: inline-block;
 }

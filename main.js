@@ -2,6 +2,8 @@ let $html = document.documentElement.getAttribute('color-theme');
 let $darkmodeToggleBtn = document.querySelector('#darkmodeToggle');
 let $darkmodeToggleIcon = document.querySelector('#darkmodeToggleIcon');
 let $settingBtn = document.querySelector('#settingBtnIcon');
+let $timeLoc = document.querySelector('#timeLocSelect');
+let $time = document.querySelector('#time');
 
 const isUserColorTheme = localStorage.getItem('color-theme');
 const isOsColorTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -34,6 +36,24 @@ window.onload = () => {
         }
         else {
             document.querySelector('#settingTab').style.display = 'none';
+        }
+    });
+
+    $timeLoc.addEventListener('change', e => {
+        if ($timeLoc.value === 'left') {
+            $time.style.marginLeft = "10";
+            $time.style.marginRight = "0";
+            $time.style.textAlign = "left";
+        }
+        else if ($timeLoc.value === 'center') {
+            $time.style.textAlign = "center";
+            $time.style.marginLeft = "0";
+            $time.style.marginRight = "0";
+        }
+        else if ($timeLoc.value === 'right') {
+            $time.style.textAlign = "right";
+            $time.style.marginLeft = "0";
+            $time.style.marginRight = "10";
         }
     });
 };

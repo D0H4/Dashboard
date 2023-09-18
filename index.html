@@ -13,17 +13,39 @@
 <body>
     <h1 id="time">12:23</h1>
     <span class="shortcut">
-        <a href="https://www.naver.com">NAVER</a>
-        <a href="https://www.github.com">GitHub</a>
-        <a href="https://www.youtube.com">YouTube</a>
-        <br>
-        <a href="https://www.music.youtube.com">YouTube Music</a>
-        <a href="https://www.mail.proton.me">Proton</a>
-        <a href="https://www.bard.google.com">Google Bard</a>
-        <br>
-        <a href="https://www.claude.ai/chats">Claude</a>
-        <a href="https://www.devdocs.io">DevDocs</a>
-        <a href="https://www.colorhunt.co">Color Hunt</a>
+        <div class="social">
+            <div class="shortcutWrap">
+                <a href="https://www.naver.com">NAVER</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.github.com">GitHub</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.youtube.com">YouTube</a>
+            </div>
+        </div>
+        <div class="productivity">
+            <div class="shortcutWrap">
+                <a href="https://www.music.youtube.com">YouTube Music</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.mail.proton.me">Proton Mail</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.bard.google.com">Google Bard</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.claude.ai/chats">Claude</a>
+            </div>
+        </div>
+        <div class="devTool">
+            <div class="shortcutWrap">
+                <a href="https://www.devdocs.io">DevDocs</a>
+            </div>
+            <div class="shortcutWrap">
+                <a href="https://www.colorhunt.co">Color Hunt</a>
+            </div>
+        </div>
     </span>
     <div class="preference" id="settingWrap" aria-expanded="false", aria-pressed="false">
         <button class="preference" id="settingBtn">
@@ -31,10 +53,17 @@
         </button>
     </div>
     <div class="preference" id="settingTab">
-        <p class="preference" id="preferenceChar" style="font-weight: bold;">Darkmode:</p>
+        <p class="preference" id="darkmodeDesc" style="font-weight: bold;">Darkmode:</p>
         <button class="preference" id="darkmodeToggle">
             <i class="fa-solid fa-lightbulb" id="darkmodeToggleIcon" style="color: #121212;"></i>
         </button>
+        <br>
+        <p class="preference" id="timeLocDesc">Clock Location: </p>
+        <select class="preference" id="timeLocSelect">
+            <option value="left">left</option>
+            <option value="center">center</option>
+            <option value="right">right</option>
+        </select>
     </div>
 </body>
 </html>
