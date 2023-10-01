@@ -1,69 +1,51 @@
 <!DOCTYPE html>
-<html lang="ko" color-theme="light">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="preference.css" />
-    <script src="https://kit.fontawesome.com/ace823e9e9.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
     <title>New Tab</title>
+    <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-    <h1 id="time">12:23</h1>
+    <div id="time">05:23</div>
     <span class="shortcut">
-        <div class="social">
-            <div class="shortcutWrap">
-                <a href="https://www.naver.com">NAVER</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.github.com">GitHub</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.youtube.com">YouTube</a>
-            </div>
-        </div>
-        <div class="productivity">
-            <div class="shortcutWrap">
-                <a href="https://www.music.youtube.com">YouTube Music</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.mail.proton.me">Proton Mail</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.bard.google.com">Google Bard</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.claude.ai/chats">Claude</a>
-            </div>
-        </div>
-        <div class="devTool">
-            <div class="shortcutWrap">
-                <a href="https://www.devdocs.io">DevDocs</a>
-            </div>
-            <div class="shortcutWrap">
-                <a href="https://www.colorhunt.co">Color Hunt</a>
-            </div>
-        </div>
-    </span>
-    <div class="preference" id="settingWrap" aria-expanded="false", aria-pressed="false">
-        <button class="preference" id="settingBtn">
-            <i class="fa-solid fa-gear" id="settingBtnIcon" style="color: #393c42;"></i>
-        </button>
-    </div>
-    <div class="preference" id="settingTab">
-        <p class="preference" id="darkmodeDesc" style="font-weight: bold;">Darkmode:</p>
-        <button class="preference" id="darkmodeToggle">
-            <i class="fa-solid fa-lightbulb" id="darkmodeToggleIcon" style="color: #121212;"></i>
-        </button>
+        <a href="https://www.naver.com" target="_blank" id="naver">
+            <img src="https://s.pstatic.net/static/www/nFavicon96.png" alt="NAVER" width="50" height="50">
+            <p>NAVER</p>
+        </a>
         <br>
-        <p class="preference" id="timeLocDesc">Clock Location: </p>
-        <select class="preference" id="timeLocSelect">
-            <option value="left">left</option>
-            <option value="center">center</option>
-            <option value="right">right</option>
-        </select>
-    </div>
+        <a href="https://www.youtube.com" target="_blank" id="youtube">
+            <img src="https://www.youtube.com/s/desktop/0c0555f3/img/favicon_96x96.png" alt="YouTube" width="50" height="50">
+            <p>YouTube</p>
+        </a>
+        <a href="https://www.github.com" target="_blank" id="github">
+            <img src="https://github.githubassets.com/favicons/favicon.svg" alt="Github" width="50" height="50">
+            <p>Github</p>
+        </a>
+        <a href="https://mail.proton.me/u/0/inbox" target="_blank" id="proton">
+            <img src="https://res.cloudinary.com/dbulfrlrz/image/upload/v1693233221/static/logos/proton-logo-p_kftwpv.svg" alt="Proton" width="50" height="50">
+            <p>Proton</p>
+        </a>
+        <a href="https://www.notion.so" target="_blank" id="notion">
+            <img src="https://www.notion.so/images/favicon.ico" alt="Notion" width="50" height="50">
+            <p>Notion</p>
+        </a>
+        <a href="https://www.bard.google.com" target="_blank" id="bard">
+            <img src="https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg" alt="Bard AI" width="50" height="50">
+            <p>Bard</p>
+        </a>
+        <a href="https://claude.ai/chats" target="_blank" id="claude">
+            <img src="https://www.anthropic.com/images/icons/apple-touch-icon.png" alt="Claude AI" width="50" height="50">
+            <p>Claude</p>
+        </a>
+        <a href="https://www.tetr.io" target="_blank" id="tetrio">
+            <img src="https://external-content.duckduckgo.com/ip3/tetr.io.ico" alt="tetrio" width="50" height="50">
+            <p>tetr.io</p>
+        </a>
+        <a href="https://colorhunt.co/" target="_blank" id="colorhunt">
+            <img src="https://colorhunt.co/img/color-hunt-icon-ios.png" alt="Color Hunt" width="50" height="50">
+            <p>Color Hunt</p>
+        </a>
+    </span>
 </body>
 </html>
