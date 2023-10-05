@@ -16,41 +16,68 @@ body {
     color: var(--color);
 }
 
+#date {
+    display: flex;
+    font-size: 3vh;
+    margin-top: -3vh;
+    margin-left: 20vh;  
+}
+
 #time {
     display: flex;
     font-size: 10vh;
     margin-top: 3vh;
-    margin-left: 3vh;
+    margin-left: 10vh;
 }
 
 .shortcut {
-    display: inline-flex;
-    margin-top: 3vh;
-    margin-left: 3vh;
+    display: inline-block;
+    margin-top: 4vh;
+    margin-left: 7vh;
+    padding: 0vh 1vh 0vh 1vh;
     border: 1px solid white;
     border-radius: 8px;
 }
 
-.shortcut a {
+.shortcut .row1 a img, .shortcut .row2 a img, .shortcut .row3 a img {
+    margin-bottom: 0.5rem;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.shortcut .row1 a, .shortcut .row2 a, .shortcut .row3 a {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     text-decoration: none;
     color: var(--color);
-    padding: 3vh 3vh 2.5vh 3vh;
+    padding: 3vh 3vh 0vh 3vh;
     border: 1px solid white;
     border-radius: 5px;
     justify-items: center;
     border-radius: 8px;
+    width: 100px;
+    height: fit-content;
 }
 
-.shortcut a img {
-    margin-bottom: 0.5rem;
-}
-
-#naver, #youtube, #github, #proton, #notion, #bard, #claude, #tetrio, #colorhunt {
+#naver, #youtube, #github {
     margin: 3vh 2vh 3vh 2vh;
+    background-color: #fff;
+    color: #0D1117;
+}
+
+#proton, #notion, #bard {
+    margin: 0.5vh 2vh 3vh 2vh;
+    background-color: #fff;
+    color: #0D1117;
+}
+
+#claude, #tetrio, #colorhunt {
+    margin: 0.5vh 2vh 3vh 2vh;
     background-color: #fff;
     color: #0D1117;
 }
@@ -59,4 +86,52 @@ p {
     display: block;
     align-items: center;
     justify-content: center;
+    width: 80px;
+}
+
+#searchBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -3.5vh;
+}
+
+#searchInput {
+    display: block;
+    margin: 0 auto;
+    width: 50vh;
+    height: 4vh;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+#todoWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35vh;
+    height: 100vh;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid white;
+}
+
+#todoTitle {
+    margin: 0;
+    width: fit-content;
+}
+
+#todoBtn {
+    position: relative;
+    margin-left: auto;
+}
+
+#plus, #minus {
+    width: 3vh;
+    margin: 0px;
+    padding: 0px;
+    padding-block: 0px;
+    padding-inline: 0px;
 }
