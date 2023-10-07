@@ -120,18 +120,44 @@ p {
 
 #todoTitle {
     margin: 0;
+    margin-top: 2vh;
+    font-size: 5vh;
+    position: relative;
     width: fit-content;
 }
 
 #todoBtn {
-    position: relative;
-    margin-left: auto;
+    margin-left: 0vh;
+    margin-top: 0vh;
+    border: 1px solid #83777792;
+    border-radius: 5px;
+    display: flex;
 }
 
-#plus, #minus {
+#blinkText {
+    margin-left: 8vh;
+    width: 10   vh;
+}
+
+#plus {
     width: 3vh;
-    margin: 0px;
+    margin: 1.5px;
     padding: 0px;
     padding-block: 0px;
     padding-inline: 0px;
+    border: #fff 1px solid;
+    border-radius: 3px;
+}
+
+#plus:hover {
+    width: 3vh;
+    margin: 1.5px;
+    padding: 0px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    right: 3vh;
+    border-radius: 3px;
+    background-color: #837777;
+    border: #837777 1px solid;
+    color: #0D1117;
 }
