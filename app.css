@@ -40,7 +40,10 @@ body {
 }
 
 .shortcut .row1 a img, .shortcut .row2 a img, .shortcut .row3 a img {
-    margin-bottom: 0.5rem;
+    /* a의 width, height값과 20씩 차이나게 설정 */
+    width: 45px;
+    height: 45px;
+    margin-top: 0.2vh;
 }
 
 .row1, .row2, .row3 {
@@ -55,38 +58,31 @@ body {
     text-align: center;
     text-decoration: none;
     color: var(--color);
-    padding: 3vh 3vh 0vh 3vh;
+    padding: 1vh 1vh 0vh 1vh;
     border: 1px solid white;
-    border-radius: 5px;
     justify-items: center;
-    border-radius: 8px;
-    width: 100px;
-    height: fit-content;
+    border-radius: 14px;
+    /* 흰색 border */
+    width: 65px;
+    height: 65px;
 }
 
-#naver, #youtube, #github {
+#youtube, #github, #deepl, #devdocs {
     margin: 3vh 2vh 3vh 2vh;
     background-color: #fff;
     color: #0D1117;
 }
 
-#proton, #notion, #bard {
+#proton, #notion, #bard, #tineye {
     margin: 0.5vh 2vh 3vh 2vh;
     background-color: #fff;
     color: #0D1117;
 }
 
-#claude, #tetrio, #colorhunt {
+#chatgpt, #tetrio, #colorhunt, #cnn {
     margin: 0.5vh 2vh 3vh 2vh;
     background-color: #fff;
     color: #0D1117;
-}
-
-p {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
 }
 
 #searchBox {
@@ -99,65 +95,44 @@ p {
 #searchInput {
     display: block;
     margin: 0 auto;
-    width: 50vh;
-    height: 4vh;
+    padding: 0vh 0vh 0vh 0.5vh;
+    width: 65vh;
+    height: 5vh;
     border-radius: 8px;
     border: 1px solid white;
 }
 
-#todoWrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 35vh;
-    height: 100vh;
-    border-radius: 10px;
+#searchButton {
+    display: none;
+}
+
+.command {
+    display: none;
+}
+
+#commandBox {
+    display: none;
     position: absolute;
-    right: 0;
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+#commandInput {
+    display: block;
+    margin: 0 auto;
+    padding: 0vh 0vh 0vh 0.5vh;
+    width: 100vh;
+    height: 8vh;
+    border-radius: 8px;
     border: 1px solid white;
-}
-
-#todoTitle {
-    margin: 0;
-    margin-top: 2vh;
-    font-size: 5vh;
-    position: relative;
-    width: fit-content;
-}
-
-#todoBtn {
-    margin-left: 0vh;
-    margin-top: 0vh;
-    border: 1px solid #83777792;
-    border-radius: 5px;
-    display: flex;
-}
-
-#blinkText {
-    margin-left: 8vh;
-    width: 10   vh;
-}
-
-#plus {
-    width: 3vh;
-    margin: 1.5px;
-    padding: 0px;
-    padding-block: 0px;
-    padding-inline: 0px;
-    border: #fff 1px solid;
-    border-radius: 3px;
-}
-
-#plus:hover {
-    width: 3vh;
-    margin: 1.5px;
-    padding: 0px;
-    padding-block: 0px;
-    padding-inline: 0px;
-    right: 3vh;
-    border-radius: 3px;
-    background-color: #837777;
-    border: #837777 1px solid;
-    color: #0D1117;
+    background-color: #0D1117;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
