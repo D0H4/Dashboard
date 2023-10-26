@@ -74,8 +74,8 @@ function search() {
         if (e.key == "Enter") {
             let search = searchInput.value;
             if (search.replace(/ /gm, "").length > 0) { // 공백이 아닌 경우
-                if (search.indexOf("https://" || "http://" || "www.")) location.href = search; // url인 경우 사이트로 이동
-                else location.href = `https://duckduckgo.com/?q=${search}`; // url이 아닌 경우 duckduckgo 검색
+                if (/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w.-]*)*\/?$/.test(search)) location.href = search.startsWith('http') ? search : `https://${search}`; // URL인 경우 해당 URL로 이동
+                else location.href = `https://duckduckgo.com/?q=${search}`; // URL이 아닌 경우 duckduckgo 검색
             }
             else searchInput.value = ""; // 공백인 경우 input값 초기화
         }
