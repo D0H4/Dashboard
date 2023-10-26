@@ -1,11 +1,11 @@
 let week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-window.onload = function() { clock(), command() }
+window.onload = function() { clock(), command(), search() }
 function clock() {
     let time = document.getElementById('time')
     let date = document.getElementById('date')
 
     let today = new Date()
-    let hour = today.getHours()
+    let hour = today.getHours() < 10 ? '0' + today.getHours() : today.getHours()
     let min = today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes()
 
     let year = today.getFullYear()
@@ -69,22 +69,14 @@ function commandRecognition() {
 
 function search() {
     let searchInput = document.getElementById('searchInput')
-    let searchForm = document.getElementById('searchForm')
     let search = searchInput.value
 
-    searchForm.addEventListener('submit', function(e) {
+    searchInput.addEventListener('keydown', (e) => {
         e.preventDefault()
-        setTimeout(() => {
-            if (search.trim) {
-                const { value } = searchInput;
-                if (value.replace(/ /gm, "").length > 0) {
-                    if (value.includes("https://") || value.includes("http://")) location.href = value;
-                    else location.href = `https://duckduckgo.com/?q=${value}`;
-                }
-                else searchInput.value = "";
-            }
-            searchInput.value = ''
-            search = ''
-        }, 0);
+        if (e.key == "Enter") {
+            search = searchInput.value;
+            if (search.replace(/ /gm, "").length > 0) location.href = `https://duckduckgo.com/?q=${search}`;
+            else searchInput.value = "";
+        }
     })
 }

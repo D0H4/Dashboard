@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
     <link rel="stylesheet" href="/app.css">
-    <script src="app.js"></script>
 </head>
 <body>
     <div id="time">12:00</div>
     <div id="date">2023-10-04</div>
     <div class="search" id="searchBox">
-        <form id="searchForm">
-            <input type="text" class="search" id="searchInput" placeholder="검색어를 입력하세요." autocomplete="off"></input>
-            <button id="searchButton" onclick="search()"></button>
-        </form>
+        <input type="text" class="search" id="searchInput" placeholder="검색어를 입력하세요." autocomplete="off"></input>
     </div>
     <span class="shortcut">
         <div class="row1">
@@ -66,5 +62,6 @@
             <button id="commandButton" onclick="commandRecognition()">실행</button>     
         </form>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
