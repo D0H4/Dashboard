@@ -11,28 +11,33 @@ body {
     overflow: hidden;
     box-sizing: border-box;
 }
+
 .widget {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .widgets-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
     max-width: 1200px;
 }
+
 .calendar {
     grid-column: 1;
     grid-row: 1 / span 1;
     text-align: center;
 }
+
 .calendar table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 5px;
 }
+
 .calendar th, .calendar td {
     width: 30px;
     height: 30px;
@@ -40,14 +45,17 @@ body {
     vertical-align: middle;
     border-radius: 50%;
 }
+
 .calendar td {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .calendar td:hover {
     background-color: #f0f0f0;
 }
+
 .calendar .current-day {
     width: 30px;
     height: 35px;
@@ -55,12 +63,14 @@ body {
     color: white;
     font-weight: bold;
 }
+
 .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .calendar-nav {
     cursor: pointer;
     font-size: 20px;
@@ -77,26 +87,32 @@ body {
     font-size: 48px;
     font-weight: 300;
 }
+
 .todo-list {
     grid-column: 3;
     grid-row: 1 / span 1;
 }
+
 .date {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
 }
+
 .time {
     font-size: 72px;
 }
+
 h2 {
     margin-top: 0;
     color: #333;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 li {
     margin-bottom: 10px;
 }
@@ -128,7 +144,7 @@ li {
 .todo-input-container {
     display: flex;
     margin-bottom: 10px;
-  }
+}
   
   .add-todo-btn {
     background-color: #007aff;
@@ -139,17 +155,17 @@ li {
     margin-left: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
   
   .add-todo-btn:hover {
     background-color: #0056b3;
-  }
+}
   
   .add-todo-btn svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
-  }
+}
 
 .add-todo-btn {
     background-color: #007aff;
@@ -202,7 +218,7 @@ li {
     margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+}
 
 .todo-item.completed .todo-checkbox {
     background-color: #007aff;
@@ -258,14 +274,14 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     backdrop-filter: blur(10px);
-  }
+}
   
-  .favorites-tabs {
+.favorites-tabs {
     display: flex;
     margin-bottom: 15px;
-  }
-  
-  .tab-button, .add-tab-button {
+}
+
+.tab-button, .add-tab-button {
     background-color: transparent;
     color: black;
     border: none;
@@ -274,40 +290,40 @@ button {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-  }
-  
-  .tab-button:hover, .add-tab-button:hover {
+}
+
+.tab-button:hover, .add-tab-button:hover {
     background-color: rgba(0, 0, 0, 0.05);
-  }
-  
-  .tab-button.active {
+}
+
+.tab-button.active {
     background-color: rgba(0, 122, 255, 0.1);
     color: #007AFF;
-  }
-  
-  .add-tab-button {
+}
+
+.add-tab-button {
     font-size: 18px;
     color: #007AFF;
-  }
-  
-  .favorites-content {
+}
+
+.favorites-content {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  
-  .tab-content {
+}
+
+.tab-content {
     display: none;
     width: 100%;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  
-  .favorite-item {
+}
+
+.favorite-item {
     background-color: white;
     border-radius: 8px;
     padding: 10px;
@@ -316,23 +332,23 @@ button {
     display: flex;
     align-items: center;
     transition: transform 0.2s;
-  }
-  
-  .favorite-item:hover {
+}
+
+.favorite-item:hover {
     transform: translateY(-2px);
-  }
-  
-  .favorite-icon {
+}
+
+.favorite-icon {
     width: 24px;
     height: 24px;
     margin-right: 10px;
-  }
-  
-  .favorite-name {
+}
+
+.favorite-name {
     font-size: 14px;
-  }
-  
-  .add-favorite-button {
+}
+
+.add-favorite-button {
     margin-top: 15px;
     background-color: #007AFF;
     color: white;
@@ -342,11 +358,11 @@ button {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .add-favorite-button:hover {
+}
+
+.add-favorite-button:hover {
     background-color: #0056b3;
-  }
+}
 
 .context-menu {
     background-color: rgba(255, 255, 255, 0.8);
