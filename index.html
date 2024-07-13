@@ -3,65 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Tab</title>
-    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="app.css">
+    <title>Dashboard</title>
 </head>
 <body>
-    <div id="time">00:00</div>
-    <div id="date">0000-00-00</div>
-    <div class="search" id="searchBox">
-        <input type="text" class="search" id="searchInput" placeholder="검색어를 입력하세요." autocomplete="off" autofocus></input>
+    <div class="widget calendar" id="calendar"></div>
+    <div class="widget clock">
+        <div class="date" id="date"></div>
+        <div class="time" id="time"></div>
     </div>
-    <span class="shortcut">
-        <div class="row1">
-            <a href="https://www.youtube.com" target="_blank" id="youtube">
-                <img src="https://www.youtube.com/s/desktop/b926992e/img/favicon_96x96.png" alt="YouTube">
-            </a>
-            <a href="https://www.github.com" target="_blank" id="github">
-                <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
-            </a>
-            <a href="https://www.deepl.com/translator" target="_blank" id="deepl">
-                <img src="https://static.deepl.com/img/favicon/favicon_96.png">
-            </a>
-            <a href="https://devdocs.io" target="_blank" id="devdocs">
-                <img src="https://devdocs.io/favicon.ico">
-            </a>
+    <div class="todo-list widget">
+        <h2>Todo</h2>
+        <div class="todo-input-container">
+          <input type="text" id="todoInput" class="todo-input" placeholder="Type your todo.">
+          <button id="addTodoBtn" class="add-todo-btn">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          </button>
         </div>
-        <div class="row2">
-            <a href="https://mail.proton.me/u/0/inbox" target="_blank" id="proton">
-                <img src="https://mail.proton.me/assets/favicon.782cda472f79b5eed726.svg?v=5.0.30.7?v=odeah705i3" alt="ProtonMail">
-            </a>
-            <a href="https://www.notion.so" target="_blank" id="notion">
-                <img src="https://www.notion.so/images/favicon.ico" alt="Notion">
-            </a>
-            <a href="https://colorhunt.co/" target="_blank" id="colorhunt">
-                <img src="https://colorhunt.co/img/color-hunt-icon-ios.png" alt="Color Hunt">
-            </a>
-            <a href="https://tineye.com/" target="_blank" id="tineye">
-                <img src="https://tineye.com/favicon.ico" alt="tineye">
-            </a>
+        <div class="todo-items-container">
+          <ul id="todoItems" class="todo-items">
+
+          </ul>
         </div>
-        <div class="row3">
-            <a href="https://www.bard.google.com" target="_blank" id="bard">
-                <img src="https://www.gstatic.com/lamda/images/favicon_v1_150160cddff7f294ce30.svg" alt="Bard AI">
-            </a>
-            <a href="https://chat.openai.com/?model=text-davinci-002-render-sha" target="_blank" id="chatgpt">
-                <img src="https://chat.openai.com/favicon-32x32.png" alt="ChatGPT">
-            </a>
-            <a href="https://www.tetr.io" target="_blank" id="tetrio">
-                <img src="https://external-content.duckduckgo.com/ip3/tetr.io.ico" alt="tetrio">
-            </a>
-            <a href="https://edition.cnn.com/" target="_blank" id="cnn">
-                <img src="https://edition.cnn.com/media/sites/cnn/favicon.ico" alt="cnn">
-            </a>
+      </div>
+      <div class="favorites-widget">
+        <div class="favorites-tabs">
+          <button class="tab-button active" data-tab="search">Search</button>
+          <button class="tab-button" data-tab="dev">Dev</button>
+          <button class="tab-button" data-tab="sns">SNS</button>
+          <button class="add-tab-button">+</button>
         </div>
-    </span>
-    <div class="command" id="commandBox">
-        <form id="commandForm">
-            <input type="text" class="command" id="commandInput" placeholder="명령어를 입력하세요" autocomplete="off"></input>
-            <button id="commandButton" onclick="commandRecognition()">실행</button>     
-        </form>
-    </div>
-    <script src="app.js"></script>
+        <div class="favorites-content">
+          <div class="tab-content active" id="search">
+
+          </div>
+          <div class="tab-content" id="dev">
+
+          </div>
+          <div class="tab-content" id="sns">
+
+          </div>
+        </div>
+        <button class="add-favorite-button">Add Favorite</button>
+      </div>
 </body>
+<script src="app.js" defer></script>
 </html>

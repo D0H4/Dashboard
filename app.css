@@ -1,142 +1,372 @@
-:root {
-    background-color: #0D1117;
-    color: #fff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', 'sans-serif';
-    transition: 0.2s ease-in-out;
-}
-
 body {
-    background-color: var(--background-color);
-    color: var(--color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 20px;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
 }
-
-#date {
+.widget {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.widgets-container {
     display: flex;
-    font-size: 2em;
-    margin-top: -3vh;
-    margin-left: 17vh;  
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
 }
-
-#time {
-    display: flex;
-    font-size: 6.5em;
-    margin-top: 7vh;
-    margin-left: 10vh;
-}
-
-.shortcut {
-    display: inline-block;
-    margin-top: 7vh;
-    margin-left: 7vh;
-    padding: 0vh 1vh 0vh 1vh;
-    border: 1px solid white;
-    border-radius: 8px;
-}
-
-.shortcut .row1 a img, .shortcut .row2 a img, .shortcut .row3 a img {
-    /* a의 width, height값과 20씩 차이나게 설정 */
-    width: 45px;
-    height: 45px;
-    margin-top: 0.2vh;
-}
-
-.row1, .row2, .row3 {
-    display: flex;
-    flex-direction: row;
-}
-
-.shortcut .row1 a, .shortcut .row2 a, .shortcut .row3 a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.calendar {
+    grid-column: 1;
+    grid-row: 1 / span 1;
     text-align: center;
-    text-decoration: none;
-    color: var(--color);
-    padding: 1vh 1vh 0vh 1vh;
-    border: 1px solid white;
-    justify-items: center;
-    border-radius: 14px;
-    /* 흰색 border */
-    width: 65px;
-    height: 65px;
+}
+.calendar table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+.calendar th, .calendar td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.calendar td {
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.calendar td:hover {
+    background-color: #f0f0f0;
+}
+.calendar .current-day {
+    width: 30px;
+    height: 35px;
+    background-color: #ff5a5f;
+    color: white;
+    font-weight: bold;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.calendar-nav {
+    cursor: pointer;
+    font-size: 20px;
+    color: #0078d7;
 }
 
-#youtube, #github, #deepl, #devdocs {
-    margin: 3vh 2vh 3vh 2vh;
-    background-color: #fff;
-    color: #0D1117;
-}
-
-#proton, #notion, #bard, #tineye {
-    margin: 0.5vh 2vh 3vh 2vh;
-    background-color: #fff;
-    color: #0D1117;
-}
-
-#chatgpt, #tetrio, #colorhunt, #cnn {
-    margin: 0.5vh 2vh 3vh 2vh;
-    background-color: #fff;
-    color: #0D1117;
-}
-
-#searchBox {
+.clock {
+    grid-column: 2;
+    grid-row: 1 / span 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: -3.5vh;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 300;
+}
+.todo-list {
+    grid-column: 3;
+    grid-row: 1 / span 1;
+}
+.date {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.time {
+    font-size: 72px;
+}
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
 }
 
-#searchInput {
-    display: block;
-    margin: 0 auto;
-    padding: 0vh 0vh 0vh 0.5vh;
-    width: 65vh;
-    height: 5vh;
-    border-radius: 8px;
-    border: 1px solid white;
+.todo-list {
+    grid-column: 3;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: hidden;
 }
 
-#searchButton {
-    display: none;
+.todo-items-container {
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
-.command {
-    display: none;
+.todo-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-#commandBox {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-}
-
-#commandInput {
-    display: block;
-    margin: 0 auto;
-    padding: 0vh 0vh 0vh 0.5vh;
-    width: 100vh;
-    height: 8vh;
-    border-radius: 8px;
-    border: 1px solid white;
-    background-color: #0D1117;
+.todo-input-container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .add-todo-btn {
+    background-color: #007aff;
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-todo-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-todo-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+.add-todo-btn {
+    background-color: #007aff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#commandButton {
+.add-todo-btn:hover {
+    background-color: #0056b3;
+}
+
+.add-todo-btn svg {
+    fill: #ffffff;
+}
+
+.todo-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+    background-color: #f8f8f8;
+}
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #007aff;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+.todo-item.completed .todo-checkbox {
+    background-color: #007aff;
+    position: relative;
+}
+
+.todo-item.completed .todo-checkbox::after {
+    font-size: 12px;
+  }
+
+.todo-text {
+    font-size: 14px;
+    color: #1c1c1e;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #8e8e93;
+}
+
+.todo-items-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.todo-items-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.todo-items-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.todo-items-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favorites-widget {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 3;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .favorites-tabs {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .tab-button, .add-tab-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .tab-button:hover, .add-tab-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .tab-button.active {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007AFF;
+  }
+  
+  .add-tab-button {
+    font-size: 18px;
+    color: #007AFF;
+  }
+  
+  .favorites-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tab-content {
     display: none;
+    width: 100%;
+  }
+  
+  .tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .favorite-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(15% - 10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  
+  .favorite-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .favorite-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .favorite-name {
+    font-size: 14px;
+  }
+  
+  .add-favorite-button {
+    margin-top: 15px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-favorite-button:hover {
+    background-color: #0056b3;
+  }
+
+.context-menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.context-menu-item {
+    padding: 7px 8px;
+    cursor: default;
+    font-size: 13px;
+    color: #000;
+    transition: background-color 0.2s ease;
+}
+
+.context-menu-item:hover {
+    background-color: #007AFF;
+    color: #ffffff;
+    border-radius: 4px;
 }
