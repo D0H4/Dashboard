@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     contextMenu.style.zIndex = '1000';
     document.body.appendChild(contextMenu);
 
-    // load saved tabs and favorites
+    // Load saved tabs and favorites
     loadTabs();
     loadFavorites();
 
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add new tab
     addTabButton.addEventListener('click', () => {
-    const newTabName = prompt('Type new tab name:');
+    const newTabName = prompt('Your new tab name:');
     if (newTabName) {
         addNewTab(newTabName);
         saveTabs();
@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // add Favorite site
     addFavoriteButton.addEventListener('click', () => {
-    const name = prompt('Type favorite site\'s name:');
-    let url = prompt('Type favorite site\'s url:');
+    const name = prompt('Your favorite site\'s name:');
+    let url = prompt('Your favorite site\'s url:');
     if (name && url) {
         if (!/^https?:\/\//i.test(url)) {
         url = 'https://' + url;
